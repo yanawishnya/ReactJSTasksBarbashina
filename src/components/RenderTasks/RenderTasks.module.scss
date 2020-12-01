@@ -3,7 +3,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.task-blocks {
+.blocks {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
   width: inherit;
 }
 
-.task-name {
+.name {
   text-align: center;
   &-theme-dark {
     color: #e7d4fa;
@@ -21,7 +21,7 @@
   }
 }
 
-.task-description {
+.description {
   text-align: center;
   &-theme-dark {
     color: #e7d4fa;
@@ -31,7 +31,7 @@
   }
 }
 
-.task-completeness {
+.completed {
   text-align: center;
   &-theme-dark {
     color: #e7d4fa;
