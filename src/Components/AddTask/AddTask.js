@@ -1,5 +1,9 @@
 import React from 'react'
 import shortid from 'shortid'
+import styles from "./AddTask.module.scss"
+import classnames from 'classnames/bind'
+
+const cx = classnames.bind(styles)
 
 class AddTask extends React.Component {
     state = {
@@ -34,17 +38,20 @@ class AddTask extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input className="input" name="name"
+                <input className={cx("input", {[`input-theme-${this.props.theme}`]: true})}
+                       name="name"
                        value={this.state.name}
                        onChange={this.handleChange}
                        placeholder="Type name of the task"
                 />
-                <input className="input" name="description"
+                <input className={cx("input", {[`input-theme-${this.props.theme}`]: true})}
+                       name="description"
                        value={this.state.description}
                        onChange={this.handleChangeDescription}
                        placeholder="Type description"
                 />
-                <button className="btn2" onClick={this.handleSubmit}>Add a task</button>
+                <button className={cx("btnAdd", {[`btnAdd-theme-${this.props.theme}`]: true})}
+                        onClick={this.handleSubmit}>Add task</button>
             </form>
         )
     }
